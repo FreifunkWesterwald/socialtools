@@ -1,2 +1,52 @@
 body {
-  background: #423; }
+  margin: 0;
+  background: #060708;
+  color: #333;
+  font-size: 18px;
+  width: 100%;
+  margin-top: 2em; }
+
+* {
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
+
+.tweets {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .tweets .card {
+    flex-basis: 300px;
+    list-style: none;
+    margin-bottom: 2em; }
+    .tweets .card .body {
+      padding: 18px 20px;
+      background: #FFB90E;
+      color: #DC0067;
+      border-radius: 3px 3px 0 0; }
+      .tweets .card .body a {
+        color: #00AEE6;
+        text-decoration: none; }
+        .tweets .card .body a:hover {
+          text-decoration: underline; }
+      .tweets .card .body img {
+        margin-top: 1em; }
+      .tweets .card .body h2 {
+        margin: .2em 0;
+        font-size: 1.4em; }
+    .tweets .card .sub {
+      padding: 20px;
+      background: #eee;
+      color: #333;
+      font-size: .8em;
+      border-radius: 0 0 3px 3px; }
+      .tweets .card .sub .info {
+        display: inline-block;
+        width: calc(50% - 2em);
+        padding: .2em 0;
+        padding-right: 1em; }
+        .tweets .card .sub .info .label {
+          font-weight: bold; }
+          .tweets .card .sub .info .label:after {
+            content: ": "; }

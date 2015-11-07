@@ -1,15 +1,75 @@
+$background-color: #060708;
+$first-text-color: #333;
+$first-hightlights-color: #FFB90E;
+$second-hightlight-color: #DC0067;
+$third-hightlight-color: #00AEE6;
+
 body {
-    background: #423;
+    margin: 0;
+    background: $background-color;
+    color: $first-text-color;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 2em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
 }
 
 .tweets {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
     .card {
-        .head {
+        flex-basis: 300px;
+        list-style: none;
+        margin-bottom: 2em;
 
-        }
         .body {
+            padding: 18px 20px;
+            background: $first-hightlights-color;
+            color: $second-hightlight-color;
+            border-radius: 3px 3px 0 0;
+            a {
+                color: $third-hightlight-color;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            img {
+                margin-top: 1em;
+            }
+            h2 {
+                margin: .2em 0;
+                font-size: 1.4em;
+            }
+        }
+        .sub {
+            padding: 20px;
+            background: #eee;
+            color: #333;
+            font-size: .8em;
+            border-radius: 0 0 3px 3px;
+            .info {
+                display: inline-block;
+                width: calc(50% - 2em);
+                padding: .2em 0;
+                padding-right: 1em;
 
+                .label {
+                    font-weight: bold;
+                    &:after {
+                        content: ": ";
+                    }
+                }
+            }
         }
     }
-
 }
