@@ -1,8 +1,10 @@
+
+var express = require('express');
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 require('../../cred.js');
-
+app.use('/', express.static('../app/public'));
 app.get('/', function(req, res){
    dir = req.params.dir,  
    res.sendFile('app/index.html', {'root': '../'});
