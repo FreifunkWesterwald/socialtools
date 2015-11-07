@@ -15,7 +15,7 @@ io.on('connection', function(socket){
     console.log('a user connected');
 //socket.emit('message', {'message': 'hello world'});
  	setInterval(function() {
-	    socket.emit('newTweets', (new Date()).getTime());
+	    socket.emit('newTweet', (new Date()).getTime());
 	    console.log('foooo');
 	        }, 5000);
 	io.emit('message', { for: 'everyone' });
