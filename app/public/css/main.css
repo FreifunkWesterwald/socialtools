@@ -30,8 +30,12 @@ img {
         text-decoration: none; }
         .tweets .card .body a:hover {
           text-decoration: underline; }
-      .tweets .card .body img {
+      .tweets .card .body img.tweet {
         margin-top: 1em; }
+      .tweets .card .body img.profile {
+        float: left;
+        margin: 0;
+        margin-right: .4em; }
       .tweets .card .body h2 {
         margin: .2em 0;
         font-size: 1.4em; }

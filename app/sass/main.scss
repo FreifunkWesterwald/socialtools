@@ -43,8 +43,13 @@ img {
                     text-decoration: underline;
                 }
             }
-            img {
+            img.tweet {
                 margin-top: 1em;
+            }
+            img.profile {
+                float: left;
+                margin: 0;
+                margin-right: .4em;
             }
             h2 {
                 margin: .2em 0;
