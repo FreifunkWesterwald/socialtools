@@ -8,22 +8,13 @@ app.use('/', express.static('../app/public'));
 app.get('/', function(req, res){
    dir = req.params.dir,  
    res.sendFile('app/index.html', {'root': '../'});
-   
-  });
+});
 
 io.on('connection', function(socket){
     console.log('a user connected');
-//socket.emit('message', {'message': 'hello world'});
- 	setInterval(function() {
-	    socket.emit('newTweet', (new Date()).getTime());
-	    console.log('foooo');
-	        }, 5000);
-	io.emit('message', { for: 'everyone' });
-	
- });
+});
 
 var Twitter = require('twitter');
- 
 var client = new Twitter({
    consumer_key: ckey,
    consumer_secret: csecret,
@@ -33,7 +24,8 @@ var client = new Twitter({
 
 client.stream('statuses/filter', {track: 'bindercon'}, function(stream) {
    stream.on('data', function(tweet) {
-      console.log(tweet.text);
+      console.log(tweet);
+      io.emit('newTweet', (tweet));
    });
 	 
    stream.on('error', function(error) {
