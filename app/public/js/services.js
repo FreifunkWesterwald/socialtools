@@ -2,15 +2,16 @@ twitterwall.factory('tweetFactory',function(){
 	var tweets = [];
 	var socket = io();
 
-	socket.on("newTweets",  function(msg){
+	socket.on("newTweet",  function(msg){
 	  console.log("new Tweets");
-	  tweets = angular.fromJSON(msg);
+	  tweets.push(msg);
+	  console.log(tweets);
 	});
 
 	return {
-		getTweets = function(){
-			return tweets;
-		}
-	}
+      getTweets: function () {
+        return tweets;
+      }
+    };
 
 });
