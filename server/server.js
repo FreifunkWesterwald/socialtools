@@ -5,7 +5,8 @@ require('../../cred.js');
 
 app.get('/', function(req, res){
    dir = req.params.dir,  
-   res.sendFile('app/test.html', {'root': '../'});
+   res.sendFile('app/index.html', {'root': '../'});
+   
   });
 
 io.on('connection', function(socket){

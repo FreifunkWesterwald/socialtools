@@ -13,7 +13,7 @@
   "keywords": [
     "twitter",
     "wall",
-    "twitterwal",
+    "twitterwall",
     "freifunk",
     "westerwald",
     "social",
@@ -26,7 +26,12 @@
     "url": "https://github.com/FreifunkWesterwald/socialtools/issues"
   },
   "devDependencies": {
+    "bower": "^1.6.5",
     "gulp": "^3.9.0",
     "gulp-sass": "^2.1.0"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "socket.io": "^1.3.7"
   }
 }
