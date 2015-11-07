@@ -5,6 +5,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 require('../../cred.js');
 app.use('/', express.static('../app/public'));
+app.use('/public', express.static('../app/public/css'));
 app.get('/', function(req, res){
    dir = req.params.dir,  
    res.sendFile('app/index.html', {'root': '../'});
