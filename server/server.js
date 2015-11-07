@@ -4,13 +4,19 @@ var io = require('socket.io')(http);
 
 app.get('/', function(req, res){
    dir = req.params.dir,  
-   res.sendfile('app/index.html', {'root': '../'});
+   res.sendFile('app/test.html', {'root': '../'});
   });
 
 io.on('connection', function(socket){
     console.log('a user connected');
-  });
-
+//socket.emit('message', {'message': 'hello world'});
+ 	setInterval(function() {
+	    socket.emit('newTweets', (new Date()).getTime());
+	    console.log('foooo');
+	        }, 5000);
+	io.emit('message', { for: 'everyone' });
+	
+ });
 http.listen(3000, function(){
     console.log('listening on *:3000');
   });
