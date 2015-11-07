@@ -1,5 +1,18 @@
-<div ng-controller="tweetCtrl">
-	<div class="card" ng-repeat="tweet in tweets">
-		<h1>Hallo</h1>{{tweet.text}}
-	</div>
+<div ng-controller="tweetCtrl" class="tweets">
+	<article class="card" ng-repeat="tweet in tweets">
+		<header class="body">
+			<img src="http://placehold.it/50x50" class="profile" />
+			<h2><a href="#" rel="author">Freifunk:</a></h2>
+			{{tweet.text}}
+			<img src="http://placehold.it/600x320" class="tweet"/>
+		</header>
+		<div class="sub">
+			<span class="info">
+				<span class="label">Favs</span>8
+			</span>
+			<span class="info">
+				<span class="label">Retweets</span>2
+			</span>
+		</div>
+	</article>
 </div>
