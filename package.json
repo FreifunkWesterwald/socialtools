@@ -1,0 +1,31 @@
+{
+  "name": "socialtools",
+  "version": "0.0.0",
+  "description": "Just a twitterwall!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FreifunkWesterwald/socialtools.git"
+  },
+  "keywords": [
+    "twitter",
+    "wall",
+    "twitterwal",
+    "freifunk",
+    "westerwald",
+    "social",
+    "tool",
+    "socialtools"
+  ],
+  "author": "Freifunk Westerwald Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FreifunkWesterwald/socialtools/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
