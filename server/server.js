@@ -22,7 +22,7 @@ var client = new Twitter({
    access_token_secret: asecret
 });
 
-client.stream('statuses/filter', {track: 'bindercon'}, function(stream) {
+client.stream('statuses/filter', {track: '#HeyMelinaSophie'}, function(stream) {
    stream.on('data', function(tweet) {
       console.log(tweet);
       io.emit('newTweet', (tweet));

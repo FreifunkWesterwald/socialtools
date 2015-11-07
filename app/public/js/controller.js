@@ -1,6 +1,17 @@
 
-twitterwall.controller('tweetCtrl', function($scope, tweetFactory){
-	$scope.tweets = tweetFactory.getTweets();
-	console.log($scope.tweets);
+twitterwall.controller('tweetCtrl', function($scope,socket){
+	$scope.tweets = [];
+	
+	socket.on("newTweet",  function(msg){
+
+	 
+	  $scope.tweets.unshift(msg);
+
+	  $scope.tweets = $scope.tweets.slice(0,5);		
+
+	  console.log("Länge der Tweetwall:", $scope.tweets.length);	  
+	  console.log("after push: ",$scope.tweets);
+	});
+	
 
 });
