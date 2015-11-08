@@ -3,7 +3,8 @@ var express = require('express');
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-require('../../cred.js');
+var tweetcache = [];
+require('../../cred.js')
 app.use('/', express.static('../app/public'));
 app.use('/public', express.static('../app/public/css'));
 app.get('/', function(req, res){
@@ -13,6 +14,9 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket){
     console.log('a user connected');
+    for (i = 0; i < tweetcache.length; i++) { 
+    	io.emit('newTweet', (tweetcache[0]));  
+    }
 });
 
 var Twitter = require('twitter');
@@ -25,6 +29,8 @@ var client = new Twitter({
 
 client.stream('statuses/filter', {track: '#HeyMelinaSophie'}, function(stream) {
    stream.on('data', function(tweet) {
+      tweetcache.unshift(tweet);
+      tweetcache = tweetcache.slice(0,5);
       console.log(tweet);
       io.emit('newTweet', (tweet));
    });
