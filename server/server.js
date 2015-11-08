@@ -4,6 +4,7 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var tweetcache = [];
+var tweettrack = 'heartstone,orr,openrheinruhr,freifunk,nma2015';
 require('../../cred.js')
 app.use('/', express.static('../app/public'));
 app.use('/public/css', express.static('../app/public/css'));
@@ -18,8 +19,9 @@ app.get('/', function(req, res){
 io.on('connection', function(socket){
     console.log('a user connected');
     for (i = 0; i < tweetcache.length; i++) { 
-    	io.emit('newTweet', (tweetcache[i]));  
+    	io.emit('changedSearchstring', (tweettrack));  
     }
+    io.emit('newTweet', (tweetcache[i]));
 });
 
 var Twitter = require('twitter');
