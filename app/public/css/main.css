@@ -7,7 +7,6 @@ body {
   color: #000;
   font-size: 25px;
   width: 100%;
-  margin-top: 2em;
   font-family: 'Open Sans'; }
 
 * {
@@ -21,6 +20,10 @@ a {
   color: #00AEE6; }
 
 .tweets {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   background-image: url(https://raw.githubusercontent.com/FreifunkWesterwald/media/master/logo_ws.png);
   background-size: 380px;
   background-repeat: no-repeat;
@@ -45,6 +48,10 @@ a {
       margin: 0; }
   .card .tweet-body {
     clear: both; }
+  .card > .images img {
+    display: block;
+    margin: 0 auto;
+    max-height: 280px; }
 
 footer {
   width: 100%;

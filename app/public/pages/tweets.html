@@ -5,7 +5,9 @@
 		<div class="profile-name"><h2><a ng-href="https://twitter.com/{{tweet.user.screen_name}}" rel="author">{{tweet.user.screen_name}}</a></h2></div>
 
 		<p class="tweet-body" ng-bind-html="tweet.text"></p>
-		
-		
+
+		<div class="images"  ng-repeat="img in tweet.entities.media">
+			<img src="{{img.media_url_https}}" />
+		</div>
 	<div>
 </div>
