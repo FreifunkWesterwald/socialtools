@@ -6,7 +6,10 @@ var io = require('socket.io')(http);
 var tweetcache = [];
 require('../../cred.js')
 app.use('/', express.static('../app/public'));
-app.use('/public', express.static('../app/public/css'));
+app.use('/public/css', express.static('../app/public/css'));
+app.use('/public/js', express.static('../app/public/js'));
+
+
 app.get('/', function(req, res){
    dir = req.params.dir,  
    res.sendFile('app/index.html', {'root': '../'});
@@ -27,7 +30,7 @@ var client = new Twitter({
    access_token_secret: asecret
 });
 
-client.stream('statuses/filter', {track: '#HeyMelinaSophie'}, function(stream) {
+client.stream('statuses/filter', {track: '#ARKvsMISS'}, function(stream) {
    stream.on('data', function(tweet) {
       tweetcache.unshift(tweet);
       tweetcache = tweetcache.slice(0,5);
