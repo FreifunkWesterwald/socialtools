@@ -4,7 +4,7 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var tweetcache = [];
-var tweettrack = '#Freifunk, #ORR, #ORR2015, #OpenRheinRuhr';
+var tweettrack = '@Freifunk, #Freifunk, @FreifunkWW, #FreifunkWW, #ORR, #ORR15, #ORR2015, #OpenRheinRuhr';
 require('../../cred.js')
 app.use('/', express.static('../app/public'));
 app.use('/public/css', express.static('../app/public/css'));
@@ -33,16 +33,18 @@ var client = new Twitter({
    access_token_secret: asecret
 });
 
+console.log(tweettrack.split(",").join(" OR "));
+client.get('search/tweets', {q: tweettrack.split(",").join(" OR ")}, function(error, tweets, response){
 
-client.get('search/tweets', {q: 'orr'}, function(error, tweets, response){
-   if(error) throw error;
+  if(error) throw error;
       for (i = 0; i < 10 ; i++) {
      	tweetcache.unshift(tweets.statuses[i]);        
+      	console.log(tweets.statuses[i]);
       }
 
 });
 
-client.stream('statuses/filter', {track: '@Freifunk, #Freifunk, @FreifunkWW, #FreifunkWW, #ORR, #ORR15, #ORR2015, #OpenRheinRuhr'}, function(stream) {
+client.stream('statuses/filter', {track: tweettrack}, function(stream) {
 
 
  stream.on('data', function(tweet) {
