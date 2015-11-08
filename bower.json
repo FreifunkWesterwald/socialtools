@@ -1,0 +1,34 @@
+{
+  "name": "socialtools",
+  "description": "Just a twitterwall!",
+  "main": "index.js",
+  "authors": [
+    "Freifunk Westerwald Team"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "twitter",
+    "wall",
+    "twitterwall",
+    "freifunk",
+    "westerwald",
+    "social",
+    "tool",
+    "socialtools"
+  ],
+  "homepage": "https://github.com/FreifunkWesterwald/socialtools",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "angularjs#~1.4.7",
+    "animate.css": "~3.4.0"
+  }
+}

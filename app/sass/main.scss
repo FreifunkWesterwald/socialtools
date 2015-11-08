@@ -1,4 +1,4 @@
-$background-color: #060708;
+$background-color: #eee;
 $first-text-color: #333;
 $first-hightlights-color: #FFB90E;
 $second-hightlight-color: #DC0067;
@@ -11,6 +11,7 @@ body {
     font-size: 18px;
     width: 100%;
     margin-top: 2em;
+	font-family: 'Open Sans';
 }
 
 * {
@@ -21,60 +22,20 @@ img {
     max-width: 100%;
 }
 
-.tweets {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    .card {
-        flex-basis: 300px;
-        list-style: none;
-        margin-bottom: 2em;
-
-        .body {
-            padding: 18px 20px;
-            background: $first-hightlights-color;
-            color: $second-hightlight-color;
-            border-radius: 3px 3px 0 0;
-            a {
-                color: $third-hightlight-color;
-                text-decoration: none;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-            img.tweet {
-                margin-top: 1em;
-            }
-            img.profile {
-                float: left;
-                margin: 0;
-                margin-right: .4em;
-            }
-            h2 {
-                margin: .2em 0;
-                font-size: 1.4em;
-            }
-        }
-        .sub {
-            padding: 20px;
-            background: #eee;
-            color: #333;
-            font-size: .8em;
-            border-radius: 0 0 3px 3px;
-            .info {
-                display: inline-block;
-                width: calc(50% - 2em);
-                padding: .2em 0;
-                padding-right: 1em;
-
-                .label {
-                    font-weight: bold;
-                    &:after {
-                        content: ": ";
-                    }
-                }
-            }
-        }
-    }
+.card{
+	width:30%;
+	float:right;
+	min-height:300px;
+	margin: 0 2.5% 1.5% 0;
+	background:#fff;
+	padding:15px;
+	.profile-image{
+		float:left;
+	}
+	.profile-name{
+		float:right;
+	}
+	.tweet-body{
+		clear:both;
+	}
 }
