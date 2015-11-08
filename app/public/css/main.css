@@ -16,9 +16,13 @@ body {
 img {
   max-width: 100%; }
 
+a {
+  text-decoration: none;
+  color: #00AEE6; }
+
 .tweets {
   background-image: url(https://raw.githubusercontent.com/FreifunkWesterwald/media/master/logo_ws.png);
-  background-size: 280px;
+  background-size: 380px;
   background-repeat: no-repeat;
   background-position-x: 95%;
   background-position-y: 98%; }
@@ -39,18 +43,17 @@ img {
     display: inline; }
     .card .profile-name h2 {
       margin: 0; }
-    .card .profile-name a {
-      text-decoration: none;
-      color: #000; }
   .card .tweet-body {
     clear: both; }
 
 footer {
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
   footer h1 {
     color: #fff;
-    text-align: center;
     margin-top: 15px; }
+  footer .twitter-link {
+    font-size: 1.6em; }
 
 .logo {
   position: absolute;

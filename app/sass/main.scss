@@ -23,10 +23,14 @@ body {
 img {
     max-width: 100%;
 }
+a{
+	text-decoration: none;
+	color: $third-hightlight-color;
+}
 
 .tweets {
 	background-image: url(https://raw.githubusercontent.com/FreifunkWesterwald/media/master/logo_ws.png);
-	background-size: 280px;
+	background-size: 380px;
 	background-repeat: no-repeat;
 	background-position-x: 95%;
 	background-position-y: 98%;
@@ -51,10 +55,6 @@ img {
 		h2 {
 			margin: 0;
 		}
-		a{
-			text-decoration: none;
-			color:#000;
-		}
 	}
 	.tweet-body{
 		clear:both;
@@ -62,10 +62,13 @@ img {
 }
 footer{
 	width: 100%;
+	text-align: center;
 	h1{
 		color: #fff;
-		text-align: center;
 		margin-top: 15px;
+	}
+	.twitter-link {
+		font-size: 1.6em;
 	}
 }
 .logo{
