@@ -5,7 +5,7 @@ body {
   margin: 0;
   background: #333;
   color: #000;
-  font-size: 18px;
+  font-size: 25px;
   width: 100%;
   margin-top: 2em;
   font-family: 'Open Sans'; }
@@ -20,7 +20,7 @@ img {
   border-radius: 2.5%;
   width: 30%;
   float: right;
-  min-height: 230px;
+  min-height: 320px;
   margin: 0 2.5% 1.5% 0;
   background: #fff;
   padding: 15px; }
@@ -46,4 +46,4 @@ footer {
   float: right;
   margin-bottom: 0px;
   bottom: 0px;
-  width: 200px; }
+  width: 380px; }
