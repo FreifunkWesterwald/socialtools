@@ -15,7 +15,7 @@ app.get('/', function(req, res){
 io.on('connection', function(socket){
     console.log('a user connected');
     for (i = 0; i < tweetcache.length; i++) { 
-    	io.emit('newTweet', (tweetcache[0]));  
+    	io.emit('newTweet', (tweetcache[i]));  
     }
 });
 
