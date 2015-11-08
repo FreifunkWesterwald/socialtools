@@ -10,6 +10,9 @@ twitterwall.controller('tweetCtrl', function($scope,socket){
 			  return "<a href='" + link + "'>" + link + "</a>";
 	      }
   	  );
+
+	  console.log("entities:", msg.entities);
+
 	  msg.text = msg.text.replace(
 		  /(#|@)[^\s,.:]*/gi,
 	  	  function (t){

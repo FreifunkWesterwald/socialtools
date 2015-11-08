@@ -12,7 +12,6 @@ body {
     color: #000;
     font-size: 25px;
     width: 100%;
-    margin-top: 2em;
 	font-family: 'Open Sans';
 }
 
@@ -23,48 +22,59 @@ body {
 img {
     max-width: 100%;
 }
+a{
+	text-decoration: none;
+	color: $third-hightlight-color;
+}
 
 .tweets {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+	/*
 	background-image: url(https://raw.githubusercontent.com/FreifunkWesterwald/media/master/logo_ws.png);
-	background-size: 280px;
+	background-size: 380px;
 	background-repeat: no-repeat;
 	background-position-x: 95%;
 	background-position-y: 98%;
+	*/
 }
 
-.card{
+.card {
 	display: inline-block;
-	width: 30%;
-	min-height: 320px;
-	margin: 1.6%;
-	padding: 1em;
-	vertical-align: top;
-	border-radius: 2.5%;
-	background: #F5F5F6;
+    width: 30%;
+    min-height: 320px;
+    margin: 1% 1.6%;
+    padding: .8em;
+    vertical-align: top;
+    border-radius: 2.5%;
+    background: #F5F5F6;
 
-	.profile-image{
+	.profile-image {
 		float: left;
 		margin-right: 1em;
 	}
-	.profile-name{
+	.profile-name {
 		display: inline;
 		h2 {
 			margin: 0;
 		}
-		a{
-			text-decoration: none;
-			color:#000;
-		}
 	}
-	.tweet-body{
+	.tweet-body {
 		clear:both;
+	}
+	> .images img {
+		display: block;
+		margin: 0 auto;
+		max-height: 220px;
 	}
 }
 footer{
 	width: 100%;
+	text-align: center;
 	h1{
 		color: #fff;
-		text-align: center;
 		margin-top: 15px;
 	}
 }
