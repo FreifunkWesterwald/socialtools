@@ -24,18 +24,20 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  background-image: url(https://raw.githubusercontent.com/FreifunkWesterwald/media/master/logo_ws.png);
-  background-size: 380px;
-  background-repeat: no-repeat;
-  background-position-x: 95%;
-  background-position-y: 98%; }
+  /*
+	background-image: url(https://raw.githubusercontent.com/FreifunkWesterwald/media/master/logo_ws.png);
+	background-size: 380px;
+	background-repeat: no-repeat;
+	background-position-x: 95%;
+	background-position-y: 98%;
+	*/ }
 
 .card {
   display: inline-block;
   width: 30%;
   min-height: 320px;
-  margin: 1.6%;
-  padding: 1em;
+  margin: 1% 1.6%;
+  padding: .8em;
   vertical-align: top;
   border-radius: 2.5%;
   background: #F5F5F6; }
@@ -51,7 +53,7 @@ a {
   .card > .images img {
     display: block;
     margin: 0 auto;
-    max-height: 280px; }
+    max-height: 220px; }
 
 footer {
   width: 100%;
@@ -59,8 +61,6 @@ footer {
   footer h1 {
     color: #fff;
     margin-top: 15px; }
-  footer .twitter-link {
-    font-size: 2em; }
 
 .logo {
   position: absolute;
