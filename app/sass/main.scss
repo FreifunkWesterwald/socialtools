@@ -24,19 +24,33 @@ img {
     max-width: 100%;
 }
 
+.tweets {
+	background-image: url(https://raw.githubusercontent.com/FreifunkWesterwald/media/master/logo_ws.png);
+	background-size: 280px;
+	background-repeat: no-repeat;
+	background-position-x: 95%;
+	background-position-y: 98%;
+}
+
 .card{
-	border-radius:2.5%;
-	width:30%;
-	float:right;
-	min-height:320px;
-	margin: 0 2.5% 1.5% 0;
-	background:#fff;
-	padding:15px;
+	display: inline-block;
+	width: 30%;
+	min-height: 320px;
+	margin: 1.6%;
+	padding: 1em;
+	vertical-align: top;
+	border-radius: 2.5%;
+	background: #F5F5F6;
+
 	.profile-image{
-		float:left;
+		float: left;
+		margin-right: 1em;
 	}
 	.profile-name{
-		float:right;
+		display: inline;
+		h2 {
+			margin: 0;
+		}
 		a{
 			text-decoration: none;
 			color:#000;
@@ -47,18 +61,16 @@ img {
 	}
 }
 footer{
-	
-	width:100%;
+	width: 100%;
 	h1{
-		color:#fff !important;
-		text-align:center;
-		margin-top:15px;
+		color: #fff;
+		text-align: center;
+		margin-top: 15px;
 	}
 }
 .logo{
-	position:absolute;
-	float:right;
-	margin-bottom:0px;
-	bottom:0px;
-	width:380px;
+	position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 240px;
 }
