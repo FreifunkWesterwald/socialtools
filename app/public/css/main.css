@@ -43,7 +43,10 @@ a {
   background: #F5F5F6; }
   .card .profile-image {
     float: left;
-    margin-right: 1em; }
+    margin-right: 2em; }
+    .card .profile-image > img {
+      width: 150%;
+      max-width: 150%; }
   .card .profile-name {
     display: inline; }
     .card .profile-name h2 {
@@ -60,7 +63,8 @@ footer {
   text-align: center; }
   footer h1 {
     color: #fff;
-    margin-top: 15px; }
+    margin-top: 10px;
+    margin-bottom: 2px; }
 
 .logo {
   position: absolute;
