@@ -19,9 +19,11 @@ app.get('/', function(req, res){
 io.on('connection', function(socket){
     console.log('a user connected');
     for (i = 0; i < tweetcache.length; i++) { 
-    	io.emit('changedSearchstring', (tweettrack));  
+    	io.emit('newTweet', (tweetcache[i]));
+
     }
-    io.emit('newTweet', (tweetcache[i]));
+    io.emit('changedSearchstring', (tweettrack));
+
 });
 
 var Twitter = require('twitter');
