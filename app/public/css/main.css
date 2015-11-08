@@ -1,7 +1,10 @@
+h1 {
+  color: #fff; }
+
 body {
   margin: 0;
-  background: #eee;
-  color: #333;
+  background: #333;
+  color: #000;
   font-size: 18px;
   width: 100%;
   margin-top: 2em;
@@ -14,9 +17,10 @@ img {
   max-width: 100%; }
 
 .card {
+  border-radius: 2.5%;
   width: 30%;
   float: right;
-  min-height: 300px;
+  min-height: 230px;
   margin: 0 2.5% 1.5% 0;
   background: #fff;
   padding: 15px; }
@@ -24,5 +28,22 @@ img {
     float: left; }
   .card .profile-name {
     float: right; }
+    .card .profile-name a {
+      text-decoration: none;
+      color: #000; }
   .card .tweet-body {
     clear: both; }
+
+footer {
+  width: 100%; }
+  footer h1 {
+    color: #fff !important;
+    text-align: center;
+    margin-top: 15px; }
+
+.logo {
+  position: absolute;
+  float: right;
+  margin-bottom: 0px;
+  bottom: 0px;
+  width: 200px; }

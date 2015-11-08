@@ -1,13 +1,15 @@
-$background-color: #eee;
+$background-color: #333;
 $first-text-color: #333;
 $first-hightlights-color: #FFB90E;
 $second-hightlight-color: #DC0067;
 $third-hightlight-color: #00AEE6;
-
+h1{
+	color:#fff;
+}
 body {
     margin: 0;
     background: $background-color;
-    color: $first-text-color;
+    color: #000;
     font-size: 18px;
     width: 100%;
     margin-top: 2em;
@@ -23,9 +25,10 @@ img {
 }
 
 .card{
+	border-radius:2.5%;
 	width:30%;
 	float:right;
-	min-height:300px;
+	min-height:230px;
 	margin: 0 2.5% 1.5% 0;
 	background:#fff;
 	padding:15px;
@@ -34,8 +37,28 @@ img {
 	}
 	.profile-name{
 		float:right;
+		a{
+			text-decoration: none;
+			color:#000;
+		}
 	}
 	.tweet-body{
 		clear:both;
 	}
+}
+footer{
+	
+	width:100%;
+	h1{
+		color:#fff !important;
+		text-align:center;
+		margin-top:15px;
+	}
+}
+.logo{
+	position:absolute;
+	float:right;
+	margin-bottom:0px;
+	bottom:0px;
+	width:200px;
 }
