@@ -11,7 +11,7 @@ twitterwall.controller('tweetCtrl', function($scope,socket){
 	      }
   	  );
 	  msg.text = msg.text.replace(
-		  /(#|@)\w*/gi,
+		  /(#|@)[^\s,.]*/gi,
 	  	  function (t){
 			  var href = "https://twitter.com/" + t;
 			  return "<a href='" + href + "'>" + t + "</a>";
