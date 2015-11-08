@@ -3,7 +3,7 @@
 		<header class="body">
 			<img src="http://placehold.it/50x50" class="profile" />
 			<h2><a href="#" rel="author">Freifunk:</a></h2>
-			{{tweet.text}}
+			<span ng-bind-html='tweet.text' class="tweet-text"></span>
 			<img src="http://placehold.it/600x320" class="tweet"/>
 		</header>
 		<div class="sub">
