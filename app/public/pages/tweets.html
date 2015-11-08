@@ -2,7 +2,7 @@
 	<div class="card"  ng-repeat="tweet in tweets">
 		<div class="profile-image"><img src="{{tweet.user.profile_image_url_https}}" class="profile" /></div>
 
-		<div class="profile-name"><h2><a ng-href="https://twitter.com/{{tweet.user.screen_name}}" rel="author">{{tweet.user.screen_name}}</a></h2></div>
+		<div class="profile-name"><h2><a ng-href="https://twitter.com/{{tweet.user.screen_name}}" rel="author">{{tweet.user.name}}</a></h2>@{{tweet.user.screen_name}}</div>
 
 		<p class="tweet-body" ng-bind-html="tweet.text"></p>
 
