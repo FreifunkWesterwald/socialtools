@@ -22,7 +22,7 @@ io.on('connection', function(socket){
     	io.emit('newTweet', (tweetcache[i]));
     }
     io.emit('changedSearchstring', (tweettrack));
-    
+
 });
 
 var Twitter = require('twitter');
@@ -37,25 +37,23 @@ console.log(tweettrack.split(",").join(" OR "));
 client.get('search/tweets', {q: tweettrack.split(",").join(" OR ")}, function(error, tweets, response){
 
   if(error) throw error;
-      for (i = 0; i < 10 ; i++) {
-     	tweetcache.unshift(tweets.statuses[i]);        
+      for (i = 0; i < 18 ; i++) {
+     	tweetcache.unshift(tweets.statuses[i]);
       	console.log(tweets.statuses[i]);
       }
 
 });
 
 client.stream('statuses/filter', {track: tweettrack}, function(stream) {
-
-
- stream.on('data', function(tweet) {
-      tweetcache.unshift(tweet);
-      tweetcache = tweetcache.slice(0,6);
-      console.log(tweet);
-      io.emit('newTweet', (tweet));
-   });
+    stream.on('data', function(tweet) {
+          tweetcache.unshift(tweet);
+          tweetcache = tweetcache.slice(0,18);
+          console.log(tweet);
+          io.emit('newTweet', (tweet));
+    });
 
    stream.on('error', function(error) {
-      throw error;
+       throw error;
    });
 });
 

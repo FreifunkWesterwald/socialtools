@@ -43,7 +43,9 @@ a{
 
 .card {
 	display: inline-block;
-    width: 30%;
+    flex-basis: 400px;
+	flex-grow: 1.5;
+	flex-shrink: 1.5;
     min-height: 320px;
     margin: 1em 1.6%;
     padding: .8em;
