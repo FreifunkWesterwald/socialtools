@@ -21,7 +21,7 @@ twitterwall.controller('tweetCtrl', function($scope,socket){
 	      }
   	  );
 
-	  var rowCount = Math.round(screen.width / 400);
+	  var rowCount = Math.round(screen.width / 480);
 	  console.debug(rowCount);
 
 	  $scope.tweets.unshift(msg);
